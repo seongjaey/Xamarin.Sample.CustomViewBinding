@@ -1,4 +1,4 @@
-﻿using System;
+﻿using CustomViewBinding.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 

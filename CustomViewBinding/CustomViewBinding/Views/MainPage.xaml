@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="CustomViewBinding.Views.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ctrl="clr-namespace:CustomViewBinding.Controls;assembly=CustomViewBinding"
+    Padding="0,24,0,24">
+
+    <StackLayout>
+        <ctrl:SectionCardView BindingContext="{Binding Section1}" />
+        <ctrl:SectionCardView BindingContext="{Binding Section2}" />
+        <ctrl:SectionCardView BindingContext="{Binding Section1}" />
+
+        <ctrl:BindableSectionCardView SectionContent="Constant content. no binding." SectionTitle="Constant title. no binding." />
+        <ctrl:BindableSectionCardView SectionContent="{Binding BindingContent}" SectionTitle="{Binding BindingTitle}" />
+        <ctrl:BindableSectionCardView SectionContent="{Binding RandomObject1.Value}" SectionTitle="{Binding RandomObject1.Key}" />
+        <ctrl:BindableSectionCardView SectionContent="{Binding RandomObject2.Y}" SectionTitle="{Binding RandomObject2.X}" />
+    </StackLayout>
+
+</ContentPage>

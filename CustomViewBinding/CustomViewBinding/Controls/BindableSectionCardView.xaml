@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="CustomViewBinding.Controls.BindableSectionCardView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Name="rootView">
+    <ContentView.Content>
+        <StackLayout
+            Margin="4"
+            Padding="8"
+            BackgroundColor="Blue"
+            Orientation="Vertical"
+            Spacing="16">
+            <Label
+                FontAttributes="Bold"
+                FontSize="16"
+                Text="{Binding FallbackValue='Title placeholder', Source={x:Reference rootView}, Path=SectionTitle}"
+                TextColor="White" />
+            <Label Text="{Binding FallbackValue='Content placeholder', Path=SectionContent, Source={x:Reference rootView}}" TextColor="LightGray" />
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>
